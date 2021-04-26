@@ -1,0 +1,77 @@
+<!--
+
+    Modal Window:
+      - position fixed
+      - :target
+      - overlay
+      - coordinates + auto width/height
+      - css units
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modal WINDOW: pseudo + position</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <!--
+            HW1: main - why??(de ce a ales elementul main)
+            Answer: 
+        -->
+        <main id="content">
+
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, laborum.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam dolorem nostrum alias aliquid aut corporis cumque? Eos quisquam aliquam voluptate sunt sint voluptatibus autem nulla libero rem quia consequatur ipsam repellat quaerat eius distinctio officia, corrupti nisi totam iusto quis deleniti itaque. Accusantium deleniti consectetur magni illo aspernatur temporibus.</p>
+            <p>Perspiciatis nobis illo aspernatur cum totam debitis corrupti in voluptatibus accusamus! Corporis eos, delectus odio harum fugiat error sapiente vero. Quibusdam quo sunt sint eaque dolore odit repellendus accusantium, minus commodi hic deserunt rem, fugit at quisquam ipsam ullam maiores neque aperiam! Autem fuga, omnis maxime qui voluptate nulla perferendis?</p>
+            <p>Error quam eius voluptas eligendi mollitia illo tempore suscipit corporis odit provident aliquam nobis enim magnam, consequuntur temporibus nemo quasi laudantium consequatur reprehenderit vel molestiae, corrupti ab? Necessitatibus fugiat optio dolore id, dolorum eos libero voluptas minus mollitia totam quaerat quisquam ratione voluptate sapiente delectus quos corrupti molestias at perspiciatis?</p>
+            <p class="ad">
+                To benefit from it HIT<a href="#modal">THIS BUTTON</a>
+            </p>
+        
+        </main>
+
+        <div id="modal">
+            <!--
+                HW2: is it correct to use to another H1??
+                Answer: Nu e corect, deoarece nu este o structura semantica.
+            -->
+            <h1>Apply for this product!</h1>
+            <h2>In order to apply fill in the blank</h2>
+
+            <form>
+                <!--
+                    HW3: FORM
+                    + LABEL -> input
+                    + [select -> prefixes(cod de tara diferit)][input phone]
+                    + full name + phone -> must fill (adaugat restrictii)
+                -->
+                <label for="fname">Full Name:</label>
+                <input type="text" id="fname" placeholder="full name: e.g John Doe" required><br>
+                <label for="phone">Phone Number:</label> <br>
+                <select name="countryCode" id="phone" >
+                    <option data-countryCode="MD" value="373" Selected>MD(+373)</option>
+                    <option data-countryCode="GB" value="44" >UK(+44)</option>
+                    <option data-countryCode="US" value="1">USA(+1)</option>                 
+                </select>
+                <input type="tel" id="phone" placeholder="phone: +123/45678" pattern="373-[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
+                <label for="mail">Email:</label><br>
+                <input type="text" id="mail" placeholder="email: john@somthing.example"><br><br>
+                
+
+                <button> <span>APPLY!!!</span> </button>
+            </form>
+            <a href="#">x</a>
+        </div>
+
+        <div class="overlay">
+
+        </div>
+
+
+    </body>
+</html>

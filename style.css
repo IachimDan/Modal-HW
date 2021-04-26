@@ -1,0 +1,138 @@
+body {
+    font-family: Arial;
+    background-color: #223;
+    color: white;
+}
+
+#content {
+    width: 90%;
+    margin: 20% auto;
+}
+
+#content {
+    text-align: justify;
+}
+
+#content .ad{
+    font-size: 150%;
+    margin: 5% 0;
+    text-align: right;
+}
+
+#content .ad a{
+    background-color: orange;
+    padding: 1%;
+    text-decoration: none;
+    margin-left: 2%;
+}
+
+#content .ad a:hover{
+    border-radius: 1em 0 1em 0;
+    padding: 0.8em;
+    transition: 0.5s;
+}
+
+/* Modal Window */
+
+#modal {
+    background-color: #678;
+    padding: 5%;
+
+    display: none;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 30%;
+    right: 30%;
+    
+    z-index: 1;
+}
+
+
+#modal a{
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+
+    position: absolute;
+    right: 4%;
+    top: 2%;
+}
+
+#modal:target {
+    display: block;
+}
+
+#modal input {
+    padding: 3%;
+    width: 80%;
+    outline: none;
+    border: 1px solid #123;
+    border-radius: 1em;
+    text-align: center;
+}
+
+#modal select{
+    position: fixed;
+    margin-left: 0.7em;
+    margin-top: 0.8em;
+}
+
+  #modal input:required:valid {
+    border-color: green;
+  }
+  #modal input:invalid {
+    border-color: red;
+  }
+  #modal input:required:focus:valid {
+    background: lightgreen;
+    background-size: 25px;
+  }
+  #modal input:focus:invalid {
+    background: lightsalmon;
+    background-size: 25px;
+  }
+
+#modal input:hover {
+    background-color: rgba(142, 182, 223, 0.829);
+}
+
+#modal button {
+    padding: 3%;
+    width: 86.9%;
+    border: none;
+    cursor: pointer;
+}
+
+#modal button:hover {
+    background-color: orange;
+    border-radius: 20em ;
+    transition: 1s;
+    font-size: 1.2em;
+}
+
+#modal button span{
+    padding: 0.5em 1em;
+}
+
+#modal button span:hover{
+    background-color: slateblue;
+    border-radius: 20em;
+    color: white;
+}
+
+#modal:target+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000A;
+}
+
+/* 
+    HW4: UX 
+    - add effects on :hover -> active elements
+    - while :hover -> this button (animatii sau ceva de genu la button + css animation)
+    - while playing with TEXT -> use EM
+*/
